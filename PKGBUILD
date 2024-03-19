@@ -4,7 +4,7 @@ url='https://wiki.ros.org/catkin'
 pkgname='ros-noetic-catkin'
 pkgver='0.8.10'
 arch=('any')
-pkgrel=2
+pkgrel=3
 license=('BSD')
 
 ros_makedepends=(
@@ -32,9 +32,10 @@ depends=(
     ros-build-tools
 )
 
-_dir="catkin-${pkgver}/"
-source=("${pkgname}-${pkgver}.tar.gz"::"https://github.com/ros/catkin/archive/${pkgver}.tar.gz")
-sha256sums=('363857f037d8f300a5889d00dc8248673f363d587d639c11e23f1f0fd3c22b92')
+_commit="ff31d451ce1c68d47bc058a4693aad6c0fb63a43"
+_dir="catkin-${_commit}/"
+source=("${pkgname}-${pkgver}.tar.gz"::"https://github.com/ros/catkin/archive/${_commit}.tar.gz")
+sha256sums=('5884a16cc6e3cf28274a5d209011caef53e1b9133ed22b9866f6f0dcc0acda8a')
 
 build() {
     # Use ROS environment variables.
